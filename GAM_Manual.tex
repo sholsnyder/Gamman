@@ -1,0 +1,77 @@
+\documentclass[a4paper,twoside,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{graphicx} %%For loading graphic files
+\usepackage{hyperref}
+
+
+\begin{document}
+
+
+\title{Global Audio Manager Manual}
+\author{Baranger - Holsnyder}
+%\date{} %%If commented, the current date is used.
+\maketitle
+
+\clearpage
+
+
+\tableofcontents %Table of contents
+
+\clearpage
+
+
+
+\section*{Introduction}
+
+GAM is a set of tools designed to optimize and speed up audio integration.
+
+\section{Arborescence}
+
+A file hierarchy has been set up to allow for an optimized, faster audio integration in your Unity project. This hierarchy represents a conform audio structure, split into three domains : Voice, Sound Effects (SFX) and Music (see \nameref{sec:gen}).
+
+
+\section{Audio Clip Manager}
+
+The Audio Clip Manager is a file browser designed specifically to allow a global view of all audio assets and optimize their management. All audio and import settings associated with an AudioClip, along with platform-specific options, can be managed here.
+
+
+\section{UI}
+
+The UI Utility automatically references all the UI objects which are liable to play a sound on user interaction, and allows to define and control these sounds and their play settings.
+
+
+\section{Music}
+
+Easy integration of a mono or stereo dynamic music. \
+The example shows the structural slicing of an 8-bit version of the Tetris music. \
+More advanced options can be used to create a multitrack randomized music with the same slicing method. The example shows the process of creating such a music from a gypsy-jazz version of the same Tetris music.
+
+
+\section{Switch} \label{sec:switch}
+
+Fundamental tool of the sound designer. The Switch allows for variation on sound samples, and is frequently used on sounds which tend to be repetitive, like footsteps, or the sound of a water drop. Without this, the game can only sound artificial and poor.
+
+\section{Animation}
+
+Utility allowing for in-editor animation preview with sound and sound event addition and synchronization on the animation timeline. This utility allows for a classic \textit{play switch} event (see \autoref{sec:switch}), or for a \textit{play switch on surface} event, which automatically detects the surface under the animated object and plays a corresponding switch. The latter can typically be used for automatic surface-dependent footstep sounds on animated characters.
+
+
+\section{Generalities} \label{sec:gen}
+
+Design of the audio in a video game: \begin{itemize}
+\item Multiple layers.
+\item 2D sounds.
+\item Stationary 3D sounds.
+\item Moving 3D sounds.
+\item Routing and mixing.
+\end{itemize}
+
+
+\appendix
+%This is a useless appendix
+
+\end{document}
+
